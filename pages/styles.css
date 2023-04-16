@@ -19,21 +19,22 @@
 }
 
 .page {
-  width: 1440px;
+ 
   margin: 0 auto;
   font-family: "Inika-Regular";
   font-style: normal;
   font-weight: 400;
+  
 }
 
 .header {
-  max-width: 1440px;
   margin: 0 auto;
   height: 134px;
-  background-color: #edf2ec;
+  background: #EDF2EC;
 }
 
 .header-container {
+  margin: 0 auto;
   display: flex;
   width: 1220px;
   height: 50px;
@@ -65,14 +66,18 @@
 
 .header-item {
   display: block;
-  width: calc(1/5*100% - 5px);
-  
+  width: calc(1 / 5 * 100% - 5px);
 }
 
 .header-links:hover {
   display: block;
   color: #e06733;
-  font-weight: 700;  
+  font-weight: 700;
+  transition: 0.5ms;
+  -webkit-transition: 0.5ms;
+  -moz-transition: 0.5ms;
+  -ms-transition: 0.5ms;
+  -o-transition: 0.5ms;
 }
 
 .header-links {
@@ -81,6 +86,12 @@
   font-weight: 400;
   font-size: 16px;
   transition-duration: 1s;
+}
+
+.welcome-content{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
 }
 
 .welcome {
@@ -146,6 +157,12 @@
   background-color: #ffffff;
 }
 
+.about-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+}
+
 .about-info {
   width: 605px;
   height: 350px;
@@ -188,6 +205,13 @@
   background: #edf2ec;
 }
 
+.service-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .service-content {
   display: flex;
   justify-content: space-between;
@@ -220,7 +244,7 @@
   border: 1px solid #e06733;
   border-radius: 5px;
   background-color: transparent;
-  color: #e06733; 
+  color: #e06733;
 }
 
 .service-cart {
@@ -229,29 +253,181 @@
   grid-gap: 55px;
   width: 1220px;
   margin: auto;
-  
 }
 .service-cart-img {
   width: 330px;
   height: 450px;
   border-style: solid;
-  border-color: #E3E1D5;
+  border-color: #e3e1d5;
   border-width: 1px;
   border-radius: 20px;
-  
 }
 
-.service-cart img { 
+.service-cart-img p {
+text-align: center;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #717171;
+}
+
+.service-cart-text {
+  margin: 0;
+  text-align: center;
+  color: #e06733;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .prices {
-  width: 1440px;
   height: 560px;
   background-color: #ffffff;
+  padding-top: 40px; 
+}
+
+.prices-content {
+  max-width: 1222px;
+  height: 405px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item{
+  width: 332px;
+
+}
+
+.prices-content h2 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  margin: 0;
+}
+
+
+.acor-container{
+min-height: 282.01px;
+width: 332px;
+margin-top: 60px;
+border: 1px solid #E3E1D5;
+border-radius: 20px;
+
+}
+
+
+.acor-container .acor-body {
+    width: 250px;
+    margin: 0 auto;
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: #D6E7D2;
+    border-radius:0 0 20px 20px;
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    -webkit-border-radius:0 0 20px 20px;
+    -moz-border-radius:0 0 20px 20px;
+    -ms-border-radius:0 0 20px 20px;
+    -o-border-radius:0 0 20px 20px;
+}
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+
+.acor-container label {
+    cursor: pointer;
+    background-color: #EDF2EC;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    margin: 34px auto 0;
+    width: 250px;
+    background: #EDF2EC;
+    border-radius: 20px;
+}
+
+.acor-container input{
+    display: none;
+}
+.acor-container label:before {
+    content: url('../image/accordion_btn.png');
+    float: right;
+}
+
+.acor-container input:checked + label:before {
+
+    transition: transform .50s;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transition: transform .50s;
+    -moz-transition: transform .50s;
+    -ms-transition: transform .50s;
+    -o-transition: transform .50s;
+}
+.acor-container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: #000;
+    padding: 20px 30px 10px;
+}
+
+.prices-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.prices-text h2{  
+width: 452px;
+height: 191.01px;
+text-align: right;
+}
+
+.prices-text span {
+  color:#499A18;
+}
+
+.prices-text button {
+  width: 162px;
+height: 50px;
+margin-bottom: 38px;
+justify-content: flex-end;
+}
+
+.prices-btn {
+background-color: #ffffff;
+border: 1px solid #E06733;
+border-radius: 5px;
+font-family: 'Inika';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+color: #E06733;
 }
 
 .contact {
-  width: 1440px;
   height: 550px;
   background-color: #edf2ec;
 }
