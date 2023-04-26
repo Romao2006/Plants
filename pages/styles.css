@@ -563,12 +563,12 @@
   padding-left: 0;
 }
 
-.tooter-text {
+.footer-text {
   display: flex;
   align-items: center;
 }
 
-.tooter-text p {
+.footer-text p {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
