@@ -39,7 +39,8 @@
   height: 50px;
   justify-content: space-between;
   align-items: center;
-  padding: 42px 109px 42px 111px;
+  padding-top: 42px;
+  padding-bottom: 42px;
 }
 
 .header-brend-logo {
@@ -64,7 +65,7 @@
 
 .header-item {
   display: block;
-  width: calc(1 / 5 * 100% - 5px);
+
 }
 
 .header-links:hover {
@@ -114,6 +115,7 @@
 }
 
 .welcome-info h1 {
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 45px;
@@ -127,6 +129,8 @@
 }
 
 .welcome-info p {
+  font-family: 'Inter';
+  font-weight: 400;
   font-style: normal;
   font-size: 20px;
   line-height: 35px;
@@ -169,6 +173,9 @@
 }
 
 .about-info h2 {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
   font-size: 40px;
   line-height: 52px;
   color: #499a18;
@@ -216,32 +223,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1007px;
+  max-width: 1007px;
   height: 94px;
   padding: 40px 324px 0 109px;
-  /*верх-право-низ-лево*/
   margin-bottom: 90px;
 }
 
 .service-content h2 {
+  font-family: 'Inika';
+  font-style: normal;
+  font-weight: 400;
   font-size: 40px;
-  line-height: 52px;
+  width: 306px;
   color: #499a18;
   margin: 0;
-  padding-right: 133px;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 94px;
 }
 
+
 .service-btm {
-  width: 161px;
+  display: flex;
+  justify-content: space-between;
+  width: 559px;
   height: 50px;
 }
 
 .service-content button {
   width: 161px;
   height: 50px;
-  margin-left: 46px;
   border: 1px solid #e06733;
   border-radius: 5px;
   background-color: transparent;
@@ -250,7 +261,8 @@
 
 .service-cart {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
   grid-gap: 55px;
   width: 1220px;
   margin: auto;
@@ -312,6 +324,8 @@
   line-height: 48px;
   color: #000000;
   margin: 0;
+  width: 135px;
+  height: 49px;
 }
 
 .acor-container {
@@ -399,7 +413,7 @@
 
 .prices-text h2 {
   width: 452px;
-  height: 191.01px;
+  height: 103px;
   text-align: right;
 }
 
@@ -411,6 +425,7 @@
   width: 162px;
   height: 50px;
   margin-bottom: 38px;
+  margin-top: 38px;
   justify-content: flex-end;
 }
 
@@ -587,4 +602,247 @@
 
 .footer-list a:first-child {
   margin-left: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .page {
+    min-width: 768px;
+  }
+
+  .header {
+    width: 768px;
+    height: 117px;
+    margin: 0 auto;
+  }
+
+  .header-container {
+    width: 668px;
+    height: 47px;
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .welcome {
+    display: flex;
+    height: 420px;
+  }
+
+  .welcome-content {
+    max-width: 688px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .welcome-container {
+    width: 280px;
+    height: 254.15px;
+    padding: 0;
+    padding-right: 50px;
+  }
+
+  .welcome-info {
+    display: flex;
+    flex-direction: column;
+    width: 346px;
+    height: 310px;
+    padding: 0;
+  }
+
+  .welcome-info h1 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .welcome-info p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .about {
+    height: 783px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    height: 668px;
+  }
+
+  .about-info {
+    width: 668px;
+    padding: 40px 50px 0 50px;
+  }
+
+  .about-info h2 {
+    font-size: 35px;
+    line-height: 46px;
+    text-align: center;
+  }
+
+  .about-info p {
+    width: 668px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .about-houseplant {
+    width: 250px;
+    height: 258px;
+  }
+
+  .service {
+    height: 1780px;
+  }
+
+  .service-content {
+    height: 184px;
+    padding: 60px 0 0 50px;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  .service-content h2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+
+  .service-btn {
+    padding-top: 40px;
+  }
+
+  .service-cart {
+    width: 668px;
+    grid-column-gap: 107px;
+    grid-row-gap: 38px;
+  }
+
+  .service-cart-img {
+    width: 280px;
+  }
+
+  .service-cart-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    -moz-border-radius: 20px 20px 0 0;
+    -ms-border-radius: 20px 20px 0 0;
+    -o-border-radius: 20px 20px 0 0;
+  }
+
+  .service-cart p {
+    width: 203px;
+    margin: 10px auto;
+  }
+
+  .service-cart-text {
+    margin-top: 10px;
+  }
+
+  .prices {
+    width: 768px;
+    height: 585px;
+  }
+
+  .prices-content {
+    width: 668px;
+    height: 100%;
+  }
+
+  .acor-container {
+    margin-top: 51px;
+  }
+
+  .prices-content h2 {
+    font-size: 35px;
+    line-height: 42px;
+    height: 49px;
+  }
+
+  .prices-text h2 {
+    font-size: 25px;
+    line-height: 35px;
+    width: 296px;
+    margin-top: 100px;
+  }
+
+  .contact {
+    width: 768px;
+    height: 739px;
+  }
+
+  .contact-content {
+    width: 768px;
+    height: 739px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contact-content img {
+    margin: 0 auto;
+    width: 200px;
+    height: 248.49px;
+  }
+
+  .contact-content h2 {
+    order: 1;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .dropdown {
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  .footer {
+    width: 768px;
+    height: 181px;
+  }
+
+  .footer-content {
+    padding-top: 33px;
+    width: 210px;
+    height: 130px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .footer-author {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    height: 24px;
+  }
+
+  .footer-author p {
+    margin: 0;
+  }
+
+  .footer-text {
+    font-size: 20px;
+    line-height: 24px;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .footer-text p {
+    margin: 0;
+  }
 }
