@@ -47,6 +47,41 @@
   height: 21px;
 }
 
+.header-burger {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  background: none;
+  border: none;
+  display: none;
+}
+
+.header-burger span {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background: #515758;
+  margin: 0 auto;
+  left: 0;
+}
+
+.header-burger span:first-child {
+  top: 0;
+}
+
+.header-burger span:nth-child(2) {
+  top: 30%;
+}
+
+.header-burger span:nth-child(3) {
+  top: 65%;
+}
+
+.header-burger span:last-child {
+  bottom: 0;
+}
+
+
 .header-nav {}
 
 .header-link {
@@ -68,23 +103,16 @@
 
 }
 
-.header-links:hover {
-  display: block;
-  color: #e06733;
-  font-weight: 700;
-  transition: 0.5ms;
-  -webkit-transition: 0.5ms;
-  -moz-transition: 0.5ms;
-  -ms-transition: 0.5ms;
-  -o-transition: 0.5ms;
-}
-
 .header-links {
   text-decoration: none;
   color: #010201;
   font-weight: 400;
   font-size: 16px;
-  transition-duration: 1s;
+}
+
+.header-links-home {
+  color: #e06733;
+  font-weight: 700;
 }
 
 .welcome-content {
@@ -844,5 +872,253 @@
 
   .footer-text p {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .page {
+    min-width: 380px;
+  }
+
+  .header {
+    width: 380px;
+    height: 96px;
+    margin: 0 auto;
+  }
+
+  .header-container {
+    width: 330px;
+    height: 24px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-burger {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    display: block;
+  }
+
+  .welcome {
+    width: 380px;
+    height: 300px;
+    font-size: 50%%;
+  }
+
+  .welcome-content {
+    width: 330px;
+    height: 252px;
+  }
+
+  .welcome-container {
+    display: none;
+  }
+
+  .welcome-info h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .welcome-info p {
+    padding-top: 20.36px;
+    padding-bottom: 20.08px;
+  }
+
+  .about {
+    height: 516px;
+  }
+
+  .about-content {
+    width: 330px;
+    height: 455px;
+    margin: 30px auto;
+    justify-content: space-between;
+  }
+
+  .about-info {
+    width: 330px;
+    height: 228.38px;
+    padding: 0;
+  }
+
+  .about-info h2 {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .about-info p {
+    font-size: 15px;
+    line-height: 25px;
+    width: 330px;
+    height: 228.38px;
+    margin: 21.50px auto 0;
+  }
+
+  .about-container {
+    width: 150px;
+    height: 147px;
+  }
+
+  .about-houseplant {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .service {
+    height: 3150px;
+  }
+
+  .service-container {
+    width: 280px;
+    height: 2870px;
+    margin: 0 auto;
+  }
+
+  .service-content h2 {
+    width: 187px;
+    height: 69px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .service-content {
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+  }
+
+  .service-btn {
+    width: 252px;
+    height: 79px;
+    padding-top: 35px;
+  }
+
+  .service-content button {
+    width: 121px;
+    height: 35px;
+  }
+
+  .service-cart {
+    margin-top: 40px;
+    width: 280px;
+    grid-row-gap: 34px;
+  }
+
+  .prices {
+    padding: 0;
+    margin-top: 25px;
+    width: 382px;
+    height: 512px;
+  }
+
+  .prices-content {
+    margin: 0 auto;
+    width: 230px;
+    display: block;
+  }
+
+  .prices-item {
+    width: 224px;
+  }
+
+  .prices-item h2 {
+    width: 90px;
+    height: 27px;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .acor-container {
+    width: 224px;
+    margin-top: 40px;
+  }
+
+  .acor-container label {
+    width: 180px;
+    height: 49.72px;
+  }
+
+  .prices-text {
+    width: 230px;
+    height: 126px;
+
+  }
+
+  .prices-text h2 {
+    margin: 16px auto;
+    width: 230px;
+    height: 77px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .prices-text button {
+    width: 121px;
+    height: 35px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .prices-list {
+    display: none;
+  }
+
+  .contact {
+    width: 384px;
+    height: 445px;
+  }
+
+  .contact-content {
+    width: 384px;
+    height: 445px;
+  }
+
+  .contact-content h2 {
+    width: 192px;
+    height: 34px;
+    margin-top: 25px;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+  }
+
+  .dropdown {
+    margin-top: 80px;
+  }
+
+  .dcontact-btn {
+    margin: 0;
+    width: 300px;
+    height: 50px;
+  }
+
+  .dropdown-content {
+    min-width: 300px;
+
+  }
+
+  .contact-content img {
+    width: 100px;
+    height: 124.25px;
+  }
+
+
+  .footer {
+    width: 380px;
+    height: 146px;
   }
 }
