@@ -81,9 +81,6 @@
   bottom: 0;
 }
 
-
-.header-nav {}
-
 .header-link {
   display: flex;
   flex-direction: row;
@@ -905,7 +902,7 @@
   .welcome {
     width: 380px;
     height: 300px;
-    font-size: 50%%;
+    font-size: 50%;
   }
 
   .welcome-content {
