@@ -1,4 +1,4 @@
-![Image alt](https://github.com/{Romao2006}/{Plants}/raw/{pages}/{image}/plants.JPG)
+![Image alt](https://github.com/{Romao2006}/{Plants}/raw/{pages}/{image}/plants.jpg)
 
  Plants
  https://romao2006.github.io/Plants/
