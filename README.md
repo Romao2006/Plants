@@ -1,4 +1,4 @@
-!(https://github.com/Romao2006/Plants/blob/pages/image/plants.JPG)
+(https://github.com/Romao2006/Plants/blob/pages/image/plants.JPG)
  Plants
  https://romao2006.github.io/Plants/
 
