@@ -1,24 +1,30 @@
-const gardensBtn = document.querySelector('.service-btm-Gardens');
-const lawnBtn = document.querySelector('.service-btm-Lawn');
-const plantingBtn = document.querySelector('.service-btm-Planting');
-const gardensCard = document.querySelectorAll('.service-cart-img:nth-child(-n+2)');
-const lawnCard = document.querySelectorAll('.service-cart-img:nth-child(n+3):nth-child(-n+4)');
-const plantingCard = document.querySelectorAll('.service-cart-img:nth-child(n+5)');
+// Получаем все кнопки
+var buttons = document
+  .getElementsByClassName("service-btn")[0]
+  .getElementsByTagName("button");
 
-gardensBtn.addEventListener('click', function() {
-  gardensCard.forEach(card => card.style.display = 'block');
-  lawnCard.forEach(card => card.style.display = 'none');
-  plantingCard.forEach(card => card.style.display = 'none');
-});
+// Получаем все карточки
+var cards = document
+  .getElementsByClassName("service-cart")[0]
+  .getElementsByClassName("service-cart-img");
 
-lawnBtn.addEventListener('click', function() {
-  gardensCard.forEach(card => card.style.display = 'none');
-  lawnCard.forEach(card => card.style.display = 'block');
-  plantingCard.forEach(card => card.style.display = 'none');
-});
+// Добавляем обработчики событий для кнопок
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function () {
+    // Получаем класс кнопки
+    var buttonClass = this.className.split("-")[2];
 
-plantingBtn.addEventListener('click', function() {
-  gardensCard.forEach(card => card.style.display = 'none');
-  lawnCard.forEach(card => card.style.display = 'none');
-  plantingCard.forEach(card => card.style.display = 'block');
-});
+    // Проходим по всем карточкам и скрываем их
+    for (var j = 0; j < cards.length; j++) {
+      cards[j].style.display = "none";
+    }
+
+    // Отображаем карточки с классом, соответствующим нажатой кнопке
+    var selectedCards = document.getElementsByClassName(
+      "service-cart-img " + buttonClass
+    );
+    for (var k = 0; k < selectedCards.length; k++) {
+      selectedCards[k].style.display = "block";
+    }
+  });
+}
