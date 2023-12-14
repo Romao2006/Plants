@@ -28,3 +28,47 @@ for (var i = 0; i < buttons.length; i++) {
     }
   });
 }
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modalTrigger = document.querySelectorAll('[data-modal-target]');
+  const closeButton = document.querySelectorAll('[data-modal-close]');
+  const modal = document.querySelector('.modal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+
+  modalTrigger.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      // Получаем данные из data-атрибутов
+      const imageSrc = trigger.querySelector('img').src;
+      const title = trigger.querySelector('.service-cart-text').textContent;
+      const description = trigger.querySelector('p').textContent;
+
+      // Заполняем содержимое модального окна
+      modalImage.src = imageSrc;
+      modalTitle.textContent = title;
+      modalDescription.textContent = description;
+
+      // Открываем модальное окно
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeButton.forEach(button => {
+    button.addEventListener('click', () => {
+      // Закрываем модальное окно
+      modal.style.display = 'none';
+    });
+  });
+
+  modal.addEventListener('click', event => {
+    if (event.target === modal) {
+      // Закрываем модальное окно при клике вне его содержимого
+      modal.style.display = 'none';
+    }
+  });
+});
