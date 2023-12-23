@@ -32,7 +32,6 @@ for (var i = 0; i < buttons.length; i++) {
 
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const modalTrigger = document.querySelectorAll('[data-modal-target]');
   const closeButton = document.querySelectorAll('[data-modal-close]');

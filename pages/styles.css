@@ -1153,8 +1153,6 @@
   cursor: pointer;
 }
 
-/* Добавьте дополнительные стили по необходимости */
-
 /* Скрытие кнопок прокрутки у модального окна в Safari */
 .modal-content::-webkit-scrollbar {
   display: none;
